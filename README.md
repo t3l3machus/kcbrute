@@ -7,6 +7,8 @@
 Basic brute-force script targeting the standard Keycloak Admin/User Console browser login flow.  
 ![Screenshot 2025-03-27 142402](https://github.com/user-attachments/assets/dd260042-3c4a-4ec1-a917-a42b7cddc11e)
 
+#### ❗Disclaimer
+This script may temporarily and/or permanently lock user accounts if **brute force detection** is enabled on the target Keycloak server. Unauthorized use is illegal. Created For security testing purposes only. You are responsible for your actions.
 
 ## Installation
 ```
@@ -44,3 +46,4 @@ OUTPUT:
   -q, --quiet           Do not print the banner on startup.
   -v, --verbose         Verbose output.
 ```
+
