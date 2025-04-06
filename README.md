@@ -30,14 +30,22 @@ git clone https://github.com/t3l3machus/kcbrute && cd kcbrute && pip3 install -r
 
 ### Supported options:
 ```
+usage: kcbrute.py [-h] -l LOGIN_URL -u USERNAMES_FILE -p PASSWORDS_FILE [-t THREADS] [-r] [-s] [-q] [-v]
+
+Basic brute-force script targeting the standard Keycloak Admin/User Console browser login flow.
+
+options:
+  -h, --help            show this help message and exit
+
 BASIC OPTIONS:
-  -l, --login-url LOGIN_URL
-                        Keycloak login URL to attack.
-  -u, --usernames-file USERNAMES_FILE
+  -l LOGIN_URL, --login-url LOGIN_URL
+                        Full Keycloak OpenID Authorization Endpoint URL to attack (Typically something like: https://keycloak.example.com/realms/{REALM}/protocol/openid-
+                        connect/auth?client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}&state={UUID}&response_mode={MODE}&response_type={TYPE}&scope=openid&nonce={UUID}&code_challenge={TOKEN}&code_challenge_method={TYPE} ).
+  -u USERNAMES_FILE, --usernames-file USERNAMES_FILE
                         File containing a usernames list.
-  -p, --passwords-file PASSWORDS_FILE
+  -p PASSWORDS_FILE, --passwords-file PASSWORDS_FILE
                         File containing a passwords list.
-  -t, --threads THREADS
+  -t THREADS, --threads THREADS
                         Number of threads to use.
   -r, --accept-risk     By selecting this option, you consent to attacking the host.
   -s, --success-stop    Stop upon finding a valid pair.
@@ -45,5 +53,6 @@ BASIC OPTIONS:
 OUTPUT:
   -q, --quiet           Do not print the banner on startup.
   -v, --verbose         Verbose output.
+
 ```
 
